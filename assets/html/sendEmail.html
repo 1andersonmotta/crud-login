@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>send-email</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>E-mail cadastrado para redefir senha</h1>
+
+            <div id="msgError"></div>
+            <div id="msgSuccess"></div>
+
+            <div class="label-float">
+                <input type="text" id="email" placeholder="" required />
+                <label id="emailLabel" for="email">E-mail</label>
+            </div>
+
+            <div class="justify-center">
+                <button onclick="enviarEmail()">Enviar</button>
+            </div>
+
+            <div class="justify-center">
+                <button onclick="voltar()">Voltar </button>
+            </div>
+
+            <div class="justify-center">
+                <hr>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../../assets/js/sendEmail.js"></script>
+</body>
+
+</html>

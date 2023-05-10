@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Sign-up</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h1>Cadastrar</h1>
+
+            <div id="msgError"></div>
+            <div id="msgSuccess"></div>
+
+            <div class="label-float">
+                <input type="text" id="usuario" placeholder="" required>
+                <label id="labelUsuario" for="usuario">*Usuário</label>
+            </div>
+
+            <div class="label-float">
+                <input type="text" id="razaoSocial" placeholder="" required>
+                <label id="labelRazaoSocial" for="razaoSocial">*Razão Social</label>
+            </div>
+
+            <div class="label-float">
+                <h1></h1>
+                <select id="tipo" required>
+                    <option>Cliente</option>
+                    <option>Fornecedor</option>
+                    <option>Transportador</option>
+                </select>
+                <label id="labeltipo" for="tipo">*Perfil do Usuário</label>
+            </div>
+
+            <div class="label-float">
+                <input type="text" id="nomeFantasia" placeholder="" required>
+                <label id="labelNomeFantasia" for="nomeFantasia">*Nome Fantasia</label>
+            </div>
+
+            <div class="label-float">
+                <input type="text" id="endereco" placeholder="" required>
+                <label id="labelEndereco" for="endereco">*Endereço</label>
+            </div>
+            <div class="label-float">
+                <input type="text" name="cnpj" id="cnpj" onkeyup="FormataCnpj(this,event)"
+                    onblur="if(!validarCNPJ(this.value)){alert('CNPJ Informado é inválido'); this.value='';}"
+                    maxlength="18" class="form-control input-md" ng-model="cadastro.cnpj" required>
+                <label id="labelCNPJ" for="CNPJ">*CNPJ</label>
+            </div>
+
+
+            <div class="label-float">
+                <input type="text" id="bairro" placeholder="" required>
+                <label id="labelBairro" for="bairro">Bairro</label>
+            </div>
+
+            <div class="label-float">
+                <input type="text" id="numero" placeholder="" required>
+                <label id="labelNumero" for="numero">Número</label>
+            </div>
+
+            <div class="label-float">
+                <input type="text" id="complemento" placeholder="" required>
+                <label id="labelComplemento" for="complemento">Complemento</label>
+            </div>
+
+            <div class="label-float">
+                <input type="text" id="CEP" placeholder="" required>
+                <label id="labelCEP" for="CEP">*CEP</label>
+            </div>
+
+            <div class="label-float">
+                <input type="text" id="telefone" placeholder="" required>
+                <label id="labelTelefone" for="telefone">*Telefone</label>
+            </div>
+
+            <div class="label-float">
+                <input type="text" id="email" placeholder="" required>
+                <label id="labelEmail" for="email">*Email</label>
+            </div>
+
+            <div class="label-float">
+                <input type="text" id="inscricaoEstadual" placeholder="" required>
+                <label id="labelInscricaoEstadual" for="inscricaoEstadual">Inscrição Estadual</label>
+            </div>
+
+            <div class="label-float">
+                <input type="text" id="inscricaoMunicipal" placeholder="" required>
+                <label id="labelInscricaoMunicipal" for="inscricaoMunicipal">Inscrição Municipal</label>
+            </div>
+
+            <div class="label-float">
+                <input type="password" id="senha" placeholder="" required>
+                <label id="labelSenha" for="senha">*Senha</label>
+                <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+
+            <div class="label-float">
+                <input type="password" id="confirmSenha" placeholder="" required>
+                <label id="labelConfirmSenha" for="confirmSenha">*Confirmar Senha</label>
+                <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+
+            <div class="justify-center">
+                <button onclick="cadastrar()"> Cadastrar</button>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="../../assets/js/signup.js"></script>
+</body>
+
+</html>
